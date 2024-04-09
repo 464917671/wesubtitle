@@ -134,7 +134,7 @@ class Move2Srt:
         }
         with open(progress_file, 'w', encoding='utf8') as pf:
             json.dump(progress, pf, ensure_ascii=False)
-        print(f'进度已保存到文件 {progress_file}')
+        print(f'进度已保存到文件: {progress_file} {cur_frame}')
 
     def resume_progress(self, progress_file):
         # 初始化 视频参数
