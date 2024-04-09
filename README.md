@@ -37,6 +37,10 @@ wesubtitle input.mp4 output.srt
 * 2、视频处理进度会实时保存
 * 3、可从处理中断处继续处理
 * 4、修正 空帧 错误
+* 5、使用方法变更，不再需要 out.srt ,输出结果会和输入媒体名一致
+``` sh
+wesubtitle input.mp4 
+```
 
 ## 原理
 
