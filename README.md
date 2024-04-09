@@ -31,6 +31,12 @@ wesubtitle input.mp4 output.srt
 如果你没有视频，可以使用以下视频进行测试，
 * 罗翔大熊猫：链接: https://pan.baidu.com/s/17VvHVUqYn8QW4v51emzyRw 提取码: tknf。
 
+## 更新内容
+对原作者的代码进行 功能增加：
+1、字幕文件实时保存
+2、视频处理进度会实时保存
+3、可从处理中断处继续处理
+4、修正 空帧 错误
 
 ## 原理
 

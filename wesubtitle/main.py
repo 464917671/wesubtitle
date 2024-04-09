@@ -182,7 +182,7 @@ class Move2Srt:
                 fout.write(srt_content)
                 print(f'实时保存 SRT 完成. 字幕数量: {len(subs)}')
 
-    # 在 _add_subs 函数中增加保存字母 和 进度信息
+    # 在 _add_subs 函数中增加保存字幕 和 进度信息
     def _add_subs(self, args, cur, end, start, fps, content, subs, progress_file):
         print('新增字幕 {} {} {}'.format(start / fps, cur / fps, content))
         new_sub = srt.Subtitle(
@@ -241,7 +241,7 @@ def main():
                     move2srt._add_subs(args, cur, cur, start, fps, content, subs, progress_file)
                 break
             cur += 1
-            # 如果不导视频结尾 则继续
+            # 如果不到视频结尾 则继续
             if cur % args.subsampling != 0:
                 continue
 
