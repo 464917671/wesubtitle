@@ -154,7 +154,7 @@ class Move2Srt:
                     )
                     for sub_data in progress.get('subs', [])
                 ]
-                print(f"读取处理进度：{cur_frame} {subtitles}")
+                print(f"读取处理进度：{cur_frame} {subtitles[-1]}")
                 self.subs = subtitles
                 self.cur = cur_frame  # 确保cur设置为加载的进度
 
@@ -177,9 +177,9 @@ class Move2Srt:
         if not srt_content.strip():
             print(f'警告: 没有要写入文件的字幕文本.')
         else:
-            print(f'{datetime.datetime.now()} 实时保存 SRT :{subs}')
             with open(args.output_srt, 'w', encoding='utf8') as fout:
                 fout.write(srt_content)
+                print(f'实时保存 SRT :{subs[-1]}')
                 print(f'实时保存 SRT 完成. 字幕数量: {len(subs)}')
 
     # 在 _add_subs 函数中增加保存字幕 和 进度信息
